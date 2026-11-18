@@ -1,0 +1,1037 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kulhad Corner — Fresh kulhad chai, two minutes from your college gate</title>
+    <meta name="description" content="Fresh kulhad chai, two minutes from your college gate. Order on WhatsApp." />
+    <meta property="og:title" content="Kulhad Corner" />
+    <meta property="og:description" content="Fresh kulhad chai, two minutes from your college gate. Order on WhatsApp." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-cream: #FAF4EC;
+        --bg-card: #FFFDF9;
+        --bg-sand: #F2E7D8;
+        --bg-footer: #F5ECE0;
+        --bg-tablist: #EFE4D5;
+        --bg-tab-hover: #E7D8C5;
+        --border-warm: #E4D3BE;
+        --border-sand: #DFCCB5;
+        --text-espresso: #2C1A12;
+        --text-umber: #5A3E30;
+        --text-muted: #6B4C3B;
+        --text-kicker: #7A5643;
+        --text-terracotta: #8F3A21;
+        --terracotta: #B44C2E;
+        --terracotta-hover: #963B21;
+        --price-orange: #EA580C;
+        --white-warm: #FFFDF9;
+        --font-display: "Fraunces", Georgia, serif;
+        --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+      }
+
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        background-color: var(--bg-cream);
+        color: var(--text-espresso);
+        font-family: var(--font-sans);
+        -webkit-tap-highlight-color: rgba(180, 76, 46, 0.15);
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bg-cream);
+        color: var(--text-espresso);
+        line-height: 1.5;
+      }
+
+      h1, h2, h3, p {
+        margin: 0;
+      }
+
+      h1, h2, h3 {
+        font-family: var(--font-display);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 72rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      /* Top Bar */
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        height: 3.5rem;
+        background-color: rgba(250, 244, 236, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-warm);
+      }
+
+      .header-inner {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .brand-link {
+        font-family: var(--font-display);
+        font-size: 1.125rem;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        color: var(--text-espresso);
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .header-nav {
+        display: none;
+        align-items: center;
+        gap: 1.5rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text-umber);
+      }
+
+      .header-nav a {
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition: color 150ms ease;
+      }
+
+      .header-nav a:hover {
+        color: var(--terracotta);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      /* Buttons */
+      .btn-whatsapp {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        background-color: var(--terracotta);
+        color: var(--white-warm);
+        font-weight: 600;
+        border-radius: 0.75rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition: background-color 150ms ease, transform 150ms ease;
+      }
+
+      .btn-whatsapp:hover {
+        background-color: var(--terracotta-hover);
+      }
+
+      .btn-whatsapp:active {
+        transform: scale(0.98);
+      }
+
+      .btn-whatsapp-sm {
+        min-height: 40px;
+        padding: 0.5rem 0.875rem;
+        font-size: 0.75rem;
+      }
+
+      .btn-whatsapp-md {
+        min-height: 44px;
+        width: 100%;
+        padding: 0.625rem 1rem;
+        font-size: 0.875rem;
+      }
+
+      .btn-whatsapp-lg {
+        min-height: 48px;
+        width: 100%;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        gap: 0.625rem;
+      }
+
+      .icon {
+        flex-shrink: 0;
+      }
+
+      a:focus-visible,
+      button:focus-visible {
+        outline: 2px solid var(--terracotta);
+        outline-offset: 2px;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      .section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        border-top: 1px solid var(--border-warm);
+      }
+
+      .section-hero {
+        border-top: none;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        line-height: 1.25;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+        color: var(--text-espresso);
+      }
+
+      /* Hero */
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        align-items: stretch;
+      }
+
+      .hero-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.25rem;
+      }
+
+      .hero-kicker {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text-terracotta);
+      }
+
+      .hero-headline {
+        font-size: clamp(2.125rem, 4.5vw, 3.5rem);
+        line-height: 1.1;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+        color: var(--text-espresso);
+        text-wrap: balance;
+      }
+
+      .hero-cta-wrap {
+        padding-top: 0.5rem;
+      }
+
+      .hero-media {
+        aspect-ratio: 16 / 10;
+        min-height: 240px;
+        border-radius: 1rem;
+        overflow: hidden;
+        background-color: var(--bg-sand);
+        border: 1px solid var(--border-warm);
+      }
+
+      .media-cover {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .media-fallback {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #F2E7D8 0%, #E6D3BC 100%);
+        color: #7D3A26;
+        padding: 1.5rem;
+        text-align: center;
+        font-size: 0.875rem;
+        font-weight: 500;
+        gap: 0.5rem;
+      }
+
+      /* Menu */
+      .menu-header {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .menu-count {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        margin-top: 0.25rem;
+      }
+
+      .filter-tablist {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        padding: 0.375rem;
+        border-radius: 0.75rem;
+        background-color: var(--bg-tablist);
+        border: 1px solid var(--border-warm);
+        align-self: flex-start;
+      }
+
+      .filter-tab {
+        min-height: 44px;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        background: transparent;
+        color: var(--text-umber);
+        font-family: var(--font-sans);
+        font-size: 0.875rem;
+        font-weight: 500;
+        white-space: nowrap;
+        flex-shrink: 0;
+        cursor: pointer;
+        transition: background-color 150ms ease, color 150ms ease;
+      }
+
+      .filter-tab:hover {
+        color: var(--text-espresso);
+        background-color: var(--bg-tab-hover);
+      }
+
+      .filter-tab.is-active {
+        background-color: var(--terracotta);
+        color: var(--white-warm);
+        box-shadow: 0 1px 2px rgba(44, 26, 18, 0.12);
+      }
+
+      .menu-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .menu-card {
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-warm);
+        border-radius: 1rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 150ms ease;
+      }
+
+      .menu-card:hover {
+        transform: translateY(-2px);
+      }
+
+      .menu-card[hidden] {
+        display: none;
+      }
+
+      .menu-card-media {
+        aspect-ratio: 4 / 3;
+        background-color: var(--bg-sand);
+        overflow: hidden;
+      }
+
+      .menu-card-body {
+        padding: 1.25rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1.25rem;
+      }
+
+      .menu-card-category {
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--text-kicker);
+      }
+
+      .menu-card-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 0.375rem;
+      }
+
+      .menu-card-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-espresso);
+      }
+
+      .menu-card-price {
+        font-size: 1.5rem;
+        line-height: 1.2;
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
+        color: var(--price-orange);
+        flex-shrink: 0;
+      }
+
+      /* Opening Hours & Location Cards */
+      .info-card {
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-warm);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .info-icon {
+        color: var(--terracotta);
+        margin-top: 0.25rem;
+        flex-shrink: 0;
+      }
+
+      .hours-text {
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: var(--text-umber);
+        margin-top: 0.5rem;
+      }
+
+      .location-wrap {
+        margin-top: 2rem;
+      }
+
+      .location-label {
+        font-family: var(--font-sans);
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--text-muted);
+      }
+
+      .location-value {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--text-espresso);
+        margin-top: 0.25rem;
+      }
+
+      /* Gallery */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .gallery-frame {
+        aspect-ratio: 4 / 3;
+        border-radius: 1rem;
+        overflow: hidden;
+        background-color: var(--bg-sand);
+        border: 1px solid var(--border-warm);
+      }
+
+      /* Contact */
+      .contact-card {
+        background-color: var(--bg-sand);
+        border: 1px solid var(--border-sand);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .contact-phone-row {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+        color: var(--text-espresso);
+      }
+
+      .contact-phone-link {
+        font-size: 1rem;
+        font-weight: 500;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .contact-phone-link:hover {
+        color: var(--terracotta);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      /* Footer */
+      .site-footer {
+        border-top: 1px solid var(--border-warm);
+        background-color: var(--bg-footer);
+      }
+
+      .footer-inner {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .footer-brand {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-espresso);
+      }
+
+      .footer-nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem 1.5rem;
+        font-size: 0.875rem;
+        color: var(--text-umber);
+      }
+
+      .footer-nav a {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        white-space: nowrap;
+        transition: color 150ms ease;
+      }
+
+      .footer-nav a:hover {
+        color: var(--terracotta);
+      }
+
+      /* Responsive Breakpoints */
+      @media (min-width: 640px) {
+        .container {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+        .site-header {
+          height: 4rem;
+        }
+        .header-inner {
+          gap: 2rem;
+        }
+        .brand-link {
+          font-size: 1.25rem;
+        }
+        .btn-whatsapp-sm {
+          min-height: 44px;
+          padding: 0.5rem 1rem;
+          font-size: 0.875rem;
+        }
+        .btn-whatsapp-lg {
+          width: auto;
+        }
+        .section {
+          padding-top: 4rem;
+          padding-bottom: 4rem;
+        }
+        .section-hero {
+          padding-top: 3.5rem;
+          padding-bottom: 3.5rem;
+        }
+        .section-title {
+          font-size: 1.875rem;
+        }
+        .hero-media {
+          min-height: 320px;
+        }
+        .menu-header {
+          flex-direction: row;
+          align-items: flex-end;
+          justify-content: space-between;
+        }
+        .filter-tab {
+          padding: 0.5rem 1.25rem;
+        }
+        .menu-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .menu-card-price {
+          font-size: 1.875rem;
+        }
+        .gallery-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .info-card-hours {
+          padding: 2rem;
+        }
+        .contact-card {
+          padding: 2.5rem;
+        }
+        .footer-inner {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .header-nav {
+          display: flex;
+        }
+        .contact-card {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .container {
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+        .section-hero {
+          padding-top: 4rem;
+          padding-bottom: 4rem;
+        }
+        .hero-grid {
+          grid-template-columns: repeat(12, minmax(0, 1fr));
+          gap: 3rem;
+        }
+        .hero-copy {
+          grid-column: span 6 / span 6;
+        }
+        .hero-media-wrap {
+          grid-column: span 6 / span 6;
+        }
+        .hero-media {
+          aspect-ratio: auto;
+          height: 100%;
+        }
+        .menu-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#hero" class="brand-link">Kulhad Corner</a>
+
+        <nav class="header-nav" aria-label="Primary navigation">
+          <a href="#menu">Menu</a>
+          <a href="#opening-hours">Hours</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a
+          href="https://wa.me/917398219592?text=Hi%20Kulhad%20Corner%2C%20I%20would%20like%20to%20order."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-whatsapp btn-whatsapp-sm"
+        >
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+          </svg>
+          <span>Order on WhatsApp</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- 1. Hero -->
+      <section id="hero" class="section section-hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="hero-kicker">Kulhad Corner · Chai &amp; snacks shop</p>
+            <h1 class="hero-headline">
+              Fresh kulhad chai, two minutes from your college gate.
+            </h1>
+            <div class="hero-cta-wrap">
+              <a
+                href="https://wa.me/917398219592?text=Hi%20Kulhad%20Corner%2C%20I%20would%20like%20to%20order."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-whatsapp btn-whatsapp-lg"
+              >
+                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                </svg>
+                <span>Order on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-media-wrap">
+            <div class="hero-media">
+              <img
+                src="/src/assets/images/hero_kulhad_chai_1795008207094.jpg"
+                alt="Steaming kulhad chai cups on a warm wooden counter"
+                data-fallback="Kulhad Corner Chai"
+                referrerpolicy="no-referrer"
+                class="media-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Menu -->
+      <section id="menu" class="section">
+        <div class="container">
+          <div class="menu-header">
+            <div>
+              <h2 class="section-title">Menu</h2>
+              <p id="menu-count" class="menu-count">3 items</p>
+            </div>
+
+            <div
+              role="tablist"
+              aria-label="Filter menu by category"
+              class="filter-tablist"
+            >
+              <button
+                type="button"
+                role="tab"
+                aria-selected="true"
+                data-filter="All"
+                class="filter-tab is-active"
+              >
+                All
+              </button>
+              <button
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-filter="Chai"
+                class="filter-tab"
+              >
+                Chai
+              </button>
+              <button
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-filter="Snacks"
+                class="filter-tab"
+              >
+                Snacks
+              </button>
+            </div>
+          </div>
+
+          <div class="menu-grid">
+            <article class="menu-card" data-category="Chai">
+              <div class="menu-card-media">
+                <img
+                  src="/src/assets/images/menu_kulhad_chai_1795008208180.jpg"
+                  alt="Steaming Kulhad Chai served in a terracotta clay cup"
+                  data-fallback="Kulhad Chai"
+                  referrerpolicy="no-referrer"
+                  class="media-cover"
+                />
+              </div>
+              <div class="menu-card-body">
+                <div>
+                  <p class="menu-card-category">Chai</p>
+                  <div class="menu-card-row">
+                    <h3 class="menu-card-title">Kulhad Chai</h3>
+                    <span class="menu-card-price">₹20</span>
+                  </div>
+                </div>
+                <a
+                  href="https://wa.me/917398219592?text=Hi%20Kulhad%20Corner%2C%20I%20would%20like%20to%20order%20Kulhad%20Chai%20(%E2%82%B920)."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-whatsapp btn-whatsapp-md"
+                >
+                  <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                  </svg>
+                  <span>Order on WhatsApp</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="menu-card" data-category="Chai">
+              <div class="menu-card-media">
+                <img
+                  src="/src/assets/images/menu_adrak_chai_1795008209081.jpg"
+                  alt="Fresh ginger Adrak Chai in a warm terracotta kulhad cup"
+                  data-fallback="Adrak Chai"
+                  referrerpolicy="no-referrer"
+                  class="media-cover"
+                />
+              </div>
+              <div class="menu-card-body">
+                <div>
+                  <p class="menu-card-category">Chai</p>
+                  <div class="menu-card-row">
+                    <h3 class="menu-card-title">Adrak Chai</h3>
+                    <span class="menu-card-price">₹25</span>
+                  </div>
+                </div>
+                <a
+                  href="https://wa.me/917398219592?text=Hi%20Kulhad%20Corner%2C%20I%20would%20like%20to%20order%20Adrak%20Chai%20(%E2%82%B925)."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-whatsapp btn-whatsapp-md"
+                >
+                  <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                  </svg>
+                  <span>Order on WhatsApp</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="menu-card" data-category="Snacks">
+              <div class="menu-card-media">
+                <img
+                  src="/src/assets/images/menu_bun_maska_1795008208623.jpg"
+                  alt="Warm toasted Bun Maska layered with butter on a ceramic plate"
+                  data-fallback="Bun Maska"
+                  referrerpolicy="no-referrer"
+                  class="media-cover"
+                />
+              </div>
+              <div class="menu-card-body">
+                <div>
+                  <p class="menu-card-category">Snacks</p>
+                  <div class="menu-card-row">
+                    <h3 class="menu-card-title">Bun Maska</h3>
+                    <span class="menu-card-price">₹40</span>
+                  </div>
+                </div>
+                <a
+                  href="https://wa.me/917398219592?text=Hi%20Kulhad%20Corner%2C%20I%20would%20like%20to%20order%20Bun%20Maska%20(%E2%82%B940)."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-whatsapp btn-whatsapp-md"
+                >
+                  <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                  </svg>
+                  <span>Order on WhatsApp</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Opening hours -->
+      <section id="opening-hours" class="section">
+        <div class="container">
+          <div class="info-card info-card-hours">
+            <svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            <div>
+              <h2 class="section-title">Opening hours</h2>
+              <p class="hours-text">7 am to 10 pm, every day</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Gallery -->
+      <section id="gallery" class="section">
+        <div class="container">
+          <h2 class="section-title">Gallery</h2>
+          <div class="gallery-grid">
+            <div class="gallery-frame">
+              <img
+                src="/src/assets/images/gallery_chai_pour_1795008209401.jpg"
+                alt="Hot chai poured from a kettle into a terracotta kulhad cup"
+                referrerpolicy="no-referrer"
+                class="media-cover"
+              />
+            </div>
+            <div class="gallery-frame">
+              <img
+                src="/src/assets/images/gallery_kulhad_stack_1795008209740.jpg"
+                alt="Handmade terracotta kulhad cups stacked on the counter"
+                referrerpolicy="no-referrer"
+                class="media-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Location -->
+      <section id="location" class="section">
+        <div class="container">
+          <h2 class="section-title">Location</h2>
+          <div class="info-card location-wrap">
+            <svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <div>
+              <h3 class="location-label">Where to find us</h3>
+              <p class="location-value">Two minutes from your college gate</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Contact -->
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="contact-card">
+            <div class="contact-info">
+              <h2 class="section-title">Contact</h2>
+              <div class="contact-phone-row">
+                <svg class="icon" style="color: var(--terracotta);" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <a href="tel:7398219592" class="contact-phone-link">
+                  WhatsApp &amp; Phone: 7398219592
+                </a>
+              </div>
+            </div>
+
+            <a
+              href="https://wa.me/917398219592?text=Hi%20Kulhad%20Corner%2C%20I%20would%20like%20to%20order."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-whatsapp btn-whatsapp-lg"
+            >
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+              </svg>
+              <span>Order on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 7. Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span class="footer-brand">Kulhad Corner</span>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#hero">Top</a>
+          <a href="#menu">Menu</a>
+          <a href="#opening-hours">Opening hours</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#location">Location</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var filterTabs = document.querySelectorAll('[data-filter]');
+        var menuCards = document.querySelectorAll('.menu-card[data-category]');
+        var menuCountEl = document.getElementById('menu-count');
+
+        function applyCategoryFilter(category) {
+          var visibleCount = 0;
+
+          menuCards.forEach(function (card) {
+            var matches = category === 'All' || card.getAttribute('data-category') === category;
+            card.hidden = !matches;
+            if (matches) visibleCount += 1;
+          });
+
+          filterTabs.forEach(function (tab) {
+            var isSelected = tab.getAttribute('data-filter') === category;
+            tab.classList.toggle('is-active', isSelected);
+            tab.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+          });
+
+          if (menuCountEl) {
+            menuCountEl.textContent = visibleCount + (visibleCount === 1 ? ' item' : ' items');
+          }
+        }
+
+        filterTabs.forEach(function (tab) {
+          tab.addEventListener('click', function () {
+            var category = tab.getAttribute('data-filter') || 'All';
+            applyCategoryFilter(category);
+          });
+        });
+
+        // Resilient image fallback if an asset is unavailable
+        document.querySelectorAll('img').forEach(function (img) {
+          img.addEventListener('error', function () {
+            var parent = img.parentNode;
+            if (!parent) return;
+            var fallback = document.createElement('div');
+            fallback.className = 'media-fallback';
+            fallback.setAttribute('role', 'img');
+            fallback.setAttribute('aria-label', img.alt || 'Kulhad Corner');
+
+            var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.setAttribute('width', '32');
+            svg.setAttribute('height', '32');
+            svg.setAttribute('viewBox', '0 0 24 24');
+            svg.setAttribute('fill', 'none');
+            svg.setAttribute('stroke', 'currentColor');
+            svg.setAttribute('stroke-width', '2');
+            svg.setAttribute('stroke-linecap', 'round');
+            svg.setAttribute('stroke-linejoin', 'round');
+            svg.setAttribute('aria-hidden', 'true');
+            svg.innerHTML =
+              '<path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/><path d="M6 2v2"/>';
+
+            var label = document.createElement('span');
+            label.textContent = img.getAttribute('data-fallback') || img.alt || 'Kulhad Corner';
+
+            fallback.appendChild(svg);
+            fallback.appendChild(label);
+            parent.replaceChild(fallback, img);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
